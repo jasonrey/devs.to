@@ -140,8 +140,8 @@ h4::before { content: "####"; }
 
 .float-avatar {
   position: fixed;
-  top: -60px;
-  right: -60px;
+  top: -20px;
+  right: -20px;
   z-index: 100;
   width: 240px;
   height: 240px;
@@ -159,8 +159,8 @@ h4::before { content: "####"; }
 .float-avatar:hover {
   width: 320px;
   height: 320px;
-  top: -80px;
-  right: -80px;
+  top: -28px;
+  right: -28px;
   box-shadow: 0 10px 32px rgba(46, 52, 64, 0.25);
   animation: avatar-wiggle 0.5s ease forwards;
 }
