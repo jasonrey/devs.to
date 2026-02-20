@@ -140,11 +140,11 @@ h4::before { content: "####"; }
 
 .float-avatar {
   position: fixed;
-  top: -20px;
-  right: -20px;
+  top: -60px;
+  right: -60px;
   z-index: 100;
-  width: 240px;
-  height: 240px;
+  width: clamp(200px, 30vw, 400px);
+  height: clamp(200px, 30vw, 400px);
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(46, 52, 64, 0.18);
@@ -157,10 +157,10 @@ h4::before { content: "####"; }
 }
 
 .float-avatar:hover {
-  width: 320px;
-  height: 320px;
-  top: -28px;
-  right: -28px;
+  width: clamp(260px, 40vw, 520px);
+  height: clamp(260px, 40vw, 520px);
+  top: -80px;
+  right: -80px;
   box-shadow: 0 10px 32px rgba(46, 52, 64, 0.25);
   animation: avatar-wiggle 0.5s ease forwards;
 }
