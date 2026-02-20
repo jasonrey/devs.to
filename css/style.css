@@ -128,26 +128,41 @@ h4::before { content: "####"; }
 
 /* ── Floating avatar ── */
 
+@keyframes avatar-wiggle {
+  0%   { transform: rotate(0deg) scale(1); }
+  15%  { transform: rotate(-6deg) scale(1.06); }
+  30%  { transform: rotate(5deg) scale(1.08); }
+  45%  { transform: rotate(-3deg) scale(1.06); }
+  60%  { transform: rotate(2deg) scale(1.05); }
+  75%  { transform: rotate(-1deg) scale(1.04); }
+  100% { transform: rotate(0deg) scale(1.04); }
+}
+
 .float-avatar {
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: -24px;
+  right: -24px;
   z-index: 100;
-  width: 36px;
-  height: 36px;
-  transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              height 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.3s ease;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(46, 52, 64, 0.15);
+  box-shadow: 0 4px 16px rgba(46, 52, 64, 0.18);
   cursor: pointer;
+  transition: width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              height 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              top 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              right 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
 }
 
 .float-avatar:hover {
-  width: 100px;
-  height: 100px;
-  box-shadow: 0 8px 24px rgba(46, 52, 64, 0.2);
+  width: 140px;
+  height: 140px;
+  top: -32px;
+  right: -32px;
+  box-shadow: 0 10px 32px rgba(46, 52, 64, 0.25);
+  animation: avatar-wiggle 0.5s ease forwards;
 }
 
 .float-avatar img {
@@ -155,7 +170,7 @@ h4::before { content: "####"; }
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0.88;
+  opacity: 0.9;
   transition: opacity 0.2s ease;
 }
 
