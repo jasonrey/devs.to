@@ -376,6 +376,7 @@ footer .container {
 }
 
 .name-break { display: none; }
+.name-sep { display: inline; }
 
 /* ── Responsive ── */
 
@@ -389,6 +390,7 @@ footer .container {
   }
 
   .name-break { display: inline; }
+  .name-sep { display: none; }
 
   /* on small screens symbols can't float left, hide them */
   h1::before, h2::before, h3::before, h4::before,
