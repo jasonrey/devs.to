@@ -404,3 +404,9 @@ footer .container {
     align-items: flex-end;
   }
 }
+
+@media print {
+  .float-avatar {
+    display: none;
+  }
+}
